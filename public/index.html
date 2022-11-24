@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="style.css" rel="stylesheet" />
+  <title>Entry Point by Encounter</title>
+</head>
+
+<body>
+  <div class="message-page">
+    <div class="message-text">
+      <p class="paragraph" id="p1">Hi, stranger</p>
+      <p class="paragraph" id="p2">You are the #__ person have scanned my code on the day of __(date). Nice meeting you.</p>
+
+      <p class="paragraph">Since you’ve scanned my code,</p>
+      <p class="paragraph">Meaning that you’ve decieded to share some Information with me,</p>
+      <p class="paragraph">I would like to invite you to a journey.</p>
+      <p class="paragraph">A journey to a virtual world,</p>
+      <p class="paragraph">Reaching the truth beyond the QR code.</p>
+      <p class="paragraph">You should leave if it makes you feel uncomfortable..</p>
+      <h1 class="paragraph">So, blue pill or red?</h1>
+    </div>
+  </div>
+
+
+  <div class="blue-red-buttons">
+    <form action="/Exit-page">
+      <button class="buttons" id="blue_button">BLUE</button>
+    </form>
+
+    <form action="/Msg-page">
+      <button class="buttons" id="red_button">RED</button>
+    </form>
+  </div>
+
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

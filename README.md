@@ -17,7 +17,9 @@ Public-main-page
 
 # 11/26
 - scroll screen to next msg 
-- 
+- 3D space and event
+- screen controls
+- model and light baking 
 
 
 

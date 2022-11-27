@@ -3,11 +3,22 @@ PUBLIC: Entry page - show message, button shows after
 # 11/22
 - message page
 1/ interface design 
-2/ 
 - permission page
 
 # 11/24
+- refactor the application purpose, compositions, aimed experience
+
+# 11/25
+- properlly show window size for mobile experience/ bgimg - 
+
+Public-main-page
+- typing effect -26
+- float msg notification -26
+
+# 11/26
+- scroll screen to next msg 
 - 
+
 
 
 

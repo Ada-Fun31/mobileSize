@@ -20,7 +20,23 @@ server.listen(port, () => {
 let io = require("socket.io");
 io = new io.Server(server);
 
-// name space
-io.on("connection",(socket)=>{
-  console.log("connected!")
+/*--------------- visting connection ---------------*/
+let userNum = 0;
+let userArray = [];
+io.on("connection", (socket) => {
+  console.log("a user connected!")
+
+  userNum = userNum + 1;
+  const user = { user_room_number: userNum };
+  userArray.push(user);
+  socket.emit('userArray', userArray);
+
+
+  socket.on("disconnect", () => {
+    // delete the -1 when store the array number
+    userNum = userNum - 1;
+    userArray.pop();
+  
+    console.log("a user disconnected");
+  });
 })

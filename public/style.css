@@ -1,40 +1,201 @@
 body {
     margin: 0;
-    background-color: rgb(243 243 243);
-    background-image: url("background-img/page-one.png");
-    background-size: cover;
-    /* background-repeat: round; */
-    /* text-align: center; */
-    color:#FAE99F;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.674);    
+    color: mistyrose;
+    /* imported font family */
+    /* font-family: 'VT323', monospace; */
+    /* font-family: 'Share Tech Mono', monospace; */
+    font-family: 'Source Code Pro', monospace;
+
 }
 
-.message-page {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: flex-start;
-    margin: 375px 20px 0px 0px;
-    /* border-radius: 0.2em; */
-    /* box-shadow: 6px 7px 7px 0px rgb(193 193 193); */
-    height: 400px;
+.container {
+    position: relative;
 }
 
 .message-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    height: 200px;
+    width: 341px;
+
+    top: 29%;
+    left: 6%;
+    /* outline: 2px solid rgb(255, 255, 255); */
+}
+
+.bg-img {
+    width: 390px;
+    height: 844px;
+
+    outline: 2px solid black;
+    background-size: 100% 100%;
+    background-image: url("background-img/black.png");
+    background-repeat: no-repeat;
+
+    background-position: top left;
+}
+
+.paragraph {
+    font-size: 27px;
+    margin: 2px 0px;
+    position: relative;
+    width: max-content;
+}
+
+/*----------- Typing Animation ----------*/
+
+:root{
+    --bgColor:rgb(17, 17, 17);
+    --barFade:100ms;
+}
+
+#para1::before,
+
+#para1::after{
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+}
+
+#para1::before{
+    background:var(--bgColor);
+    animation: typewriter 1s steps(6) 1s forwards;
+}
+
+#para1::after{
+    width: 0.125em;
+    background: mistyrose;
+    animation: typewriter 1s steps(6) 1s forwards,
+    blink 700ms steps(6) infinite,
+    blink var(--barFade) 2s forwards;
+}
+
+#para2::before,
+#para2::after{
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+}
+
+#para2::before{
+    background:var(--bgColor);
+    animation: typewriter 2s steps(11) 2.5s forwards;
+}
+
+#para2::after{
+    width: 0.125em;
+    animation: showBar 100ms 2s forwards,
+    typewriter 2s steps(11) 2.5s forwards,
+    blink 700ms steps(11) 2s infinite,
+    blink var(--barFade) 4.5s forwards;
+}
+
+
+#para3::before,
+#para3::after{
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+}
+
+#para3::before{
+    background:var(--bgColor);
+    animation: typewriter 2.5s steps(15) 5s forwards;
+}
+
+#para3::after{
+    width: 0.125em;
+    animation: showBar 100ms 5s forwards,
+
+    typewriter 2.5s steps(15) 5s forwards,
+    blink 700ms steps(15) 5s infinite,
+
+    blink var(--barFade) 7.5s forwards;
+}
+
+.notification{
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 17px;
+    opacity: 0;
+    transform: translateY(1rem);
+    animation: fadeIn 1.2s ease 7.8s forwards,
+    float 700ms ease infinite;
+}
+
+
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes typewriter{
+    to{
+        left:100%
+    }
+}
+
+@keyframes blink{
+    to{
+        background:transparent;
+    }
+}
+
+@keyframes showBar{
+    to{
+        background:mistyrose;
+    }
+}
+
+@keyframes float{
+    to{
+        transform: translateY(0.3rem)
+    }
+}
+
+
+
+
+
+
+
+/*-----------use later-----------*/
+/* .message-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 375px 20px 0px 0px;
+    height: 400px;
+} */
+
+/* .message-text {
     margin: 1em;
     text-align: right;
 }
 
-.paragraph{
+.paragraph {
     margin-block-start: 0px;
     margin-block-end: 13px;
-}
-
-/* h1{
-    color:#000000;
-} */
+} 
+ */
 
 
-.blue-red-buttons {
+
+/* .blue-red-buttons {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -56,11 +217,16 @@ body {
     background-color: crimson;
     color: rgb(255 255 255);
     border-radius: 0.8em;
-}
+} */
 
 
 
 
+/* @media (max-width: 800px) {
+    .sub-container {
+        width: 75%;
+    }
+} */
 
 
 

@@ -1,7 +1,9 @@
+/*----------- Page Style ----------*/
+
 body {
     margin: 0;
     padding: 0;
-    background-color: rgba(0, 0, 0, 0.674);    
+    background-color: rgba(0, 0, 0, 0.674);
     color: mistyrose;
     /* imported font family */
     /* font-family: 'VT323', monospace; */
@@ -18,7 +20,7 @@ body {
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
+    justify-content: flex-start;
     height: 200px;
     width: 341px;
 
@@ -46,124 +48,178 @@ body {
     width: max-content;
 }
 
-/*----------- Typing Animation ----------*/
+/*----------- 1. Typing Animation ----------*/
 
-:root{
-    --bgColor:rgb(17, 17, 17);
-    --barFade:100ms;
+:root {
+    --bgColor: rgb(17, 17, 17);
+    --barFade: 100ms;
 }
 
 #para1::before,
 
-#para1::after{
-    content:"";
-    position:absolute;
-    top:0;
-    right:0;
-    left:0;
-    bottom:0;
+#para1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
 
-#para1::before{
-    background:var(--bgColor);
+#para1::before {
+    background: var(--bgColor);
     animation: typewriter 1s steps(6) 1s forwards;
 }
 
-#para1::after{
+#para1::after {
     width: 0.125em;
     background: mistyrose;
     animation: typewriter 1s steps(6) 1s forwards,
-    blink 700ms steps(6) infinite,
-    blink var(--barFade) 2s forwards;
+        blink 700ms steps(6) infinite,
+        blink var(--barFade) 2s forwards;
 }
 
 #para2::before,
-#para2::after{
-    content:"";
-    position:absolute;
-    top:0;
-    right:0;
-    left:0;
-    bottom:0;
+#para2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
 
-#para2::before{
-    background:var(--bgColor);
+#para2::before {
+    background: var(--bgColor);
     animation: typewriter 2s steps(11) 2.5s forwards;
 }
 
-#para2::after{
+#para2::after {
     width: 0.125em;
     animation: showBar 100ms 2s forwards,
-    typewriter 2s steps(11) 2.5s forwards,
-    blink 700ms steps(11) 2s infinite,
-    blink var(--barFade) 4.5s forwards;
+        typewriter 2s steps(11) 2.5s forwards,
+        blink 700ms steps(11) 2s infinite,
+        blink var(--barFade) 4.5s forwards;
 }
 
 
 #para3::before,
-#para3::after{
-    content:"";
-    position:absolute;
-    top:0;
-    right:0;
-    left:0;
-    bottom:0;
+#para3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
 
-#para3::before{
-    background:var(--bgColor);
+#para3::before {
+    background: var(--bgColor);
     animation: typewriter 2.5s steps(15) 5s forwards;
 }
 
-#para3::after{
+#para3::after {
     width: 0.125em;
     animation: showBar 100ms 5s forwards,
 
-    typewriter 2.5s steps(15) 5s forwards,
-    blink 700ms steps(15) 5s infinite,
+        typewriter 2.5s steps(15) 5s forwards,
+        blink 700ms steps(15) 5s infinite,
 
-    blink var(--barFade) 7.5s forwards;
+        blink var(--barFade) 7.5s forwards;
 }
 
-.notification{
+.notification {
     font-family: 'Share Tech Mono', monospace;
     font-size: 17px;
     opacity: 0;
     transform: translateY(1rem);
     animation: fadeIn 1.2s ease 7.8s forwards,
-    float 700ms ease infinite;
+        float 700ms ease infinite;
 }
 
+/*----------- 2. fade in animation ----------*/
+.mediumP {
+    font-size: 22px;
+}
 
-@keyframes fadeIn{
-    to{
+.smallP {
+    font-size: 15px;
+}
+
+.AnimaPara1 {
+    /* color:blueviolet; */
+    opacity: 0;
+    transform: translateY(1rem);
+    animation: fadeIn 0.8s ease forwards;
+}
+.AnimaPara2 {
+    /* color:blueviolet; */
+    opacity: 0;
+    transform: translateY(1rem);
+    animation: fadeIn 0.8s ease 0.3s forwards;
+}
+.AnimaPara3 {
+    /* color:blueviolet; */
+    opacity: 0;
+    transform: translateY(1rem);
+    animation: fadeIn 0.8s ease 0.6s forwards;
+}
+
+@keyframes fadeIn {
+    to {
         opacity: 1;
         transform: translateY(0)
     }
 }
 
-@keyframes typewriter{
-    to{
-        left:100%
+@keyframes typewriter {
+    to {
+        left: 100%
     }
 }
 
-@keyframes blink{
-    to{
-        background:transparent;
+@keyframes blink {
+    to {
+        background: transparent;
     }
 }
 
-@keyframes showBar{
-    to{
-        background:mistyrose;
+@keyframes showBar {
+    to {
+        background: mistyrose;
     }
 }
 
-@keyframes float{
-    to{
+@keyframes float {
+    to {
         transform: translateY(0.3rem)
+    }
+}
+
+/*----------- Touch Event ----------*/
+.dot {
+    /* background-color: mistyrose; */
+    outline: 3px solid mistyrose;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    animation: fade 1s ease 0.2s forwards,
+        size 1s ease 0.2s forwards;
+}
+
+@keyframes fade {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes size {
+    to {
+        width: 0;
+        height: 0;
     }
 }
 

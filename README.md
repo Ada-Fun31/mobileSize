@@ -16,7 +16,10 @@ Public-main-page
 - float msg notification -26
 
 # 11/26
-- scroll screen to next msg 
+- sync glitch & github code - 
+- touch event:
+* mouse animated *
+- scroll screen to next msg - 
 - 3D space and event
 - screen controls
 - model and light baking 

@@ -165,6 +165,13 @@ body {
     animation: fadeIn 0.8s ease 0.6s forwards;
 }
 
+.AnimaPara4 {
+    /* color:blueviolet; */
+    opacity: 0;
+    transform: translateY(1rem);
+    animation: fadeIn 0.8s ease 0.8s forwards;
+}
+
 @keyframes fadeIn {
     to {
         opacity: 1;

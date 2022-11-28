@@ -12,14 +12,14 @@ PUBLIC: Entry page - show message, button shows after
 - properlly show window size for mobile experience/ bgimg - 
 
 Public-main-page
-- typing effect -26
-- float msg notification -26
+1/ typing effect -26
+2/ float msg notification -26
 
 # 11/26
 - sync glitch & github code - 
-- touch event:
-* mouse animated *
-- scroll screen to next msg - 
+* touch event *
+1/mouse animated
+2/scroll screen to next msg
 - 3D space and event
 - screen controls
 - model and light baking 

@@ -36,6 +36,7 @@ window.addEventListener('load', function () {
 
    /*----- eventListener: touch -----*/
    let startY, endY, userY;
+   let notifier = document.getElementById("notifier")
    let para1 = document.getElementById("para1");
    let para2 = document.getElementById("para2");
    let para3 = document.getElementById("para3");
@@ -45,6 +46,10 @@ window.addEventListener('load', function () {
    let para7 = document.getElementById("para7");
    let para8 = document.getElementById("para8");
    let para9 = document.getElementById("para9");
+   let para10 = document.getElementById("para10");
+   let para11 = document.getElementById("para11");
+   let para12 = document.getElementById("para12");
+   let para13 = document.getElementById("para13");
 
    document.addEventListener("touchstart", (tS) => {
       // tS.preventDefault();
@@ -81,6 +86,30 @@ window.addEventListener('load', function () {
       userY = startY - endY;
 
       if (userY > 330) {
+         if (swipes == 3) {
+            console.log("turn default");
+            para10.style.display = "none";
+            para11.style.display = "none";
+            para12.style.display = "none";
+            para13.style.display = "none";
+
+            swipes = 0;
+         }
+
+         if (swipes == 2) {
+            console.log("third swipe");
+            para4.style.display = "none";
+            para5.style.display = "none";
+            para6.style.display = "none";
+            para7.style.display = "none";
+            para8.style.display = "none";
+            para9.style.display = "none";
+
+            para10.style.display = "block";
+            para11.style.display = "block";
+            para12.style.display = "block";
+            para13.style.display = "block";
+         }
 
          if (swipes == 1) {
             console.log("second swipe")
@@ -95,6 +124,7 @@ window.addEventListener('load', function () {
             para1.innerText = "";
             para2.innerText = "";
             para3.innerText = "";
+            // notifier.style.display = "none";
 
             para4.style.display = "block";
             para5.style.display = "block";

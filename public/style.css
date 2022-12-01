@@ -24,7 +24,7 @@ body {
     height: 200px;
     width: 341px;
 
-    top: 29%;
+    top: 26%;
     left: 6%;
     /* outline: 2px solid rgb(255, 255, 255); */
 }
@@ -46,6 +46,32 @@ body {
     margin: 2px 0px;
     position: relative;
     width: max-content;
+}
+
+.infoButtons {
+    position: absolute;
+    top: 90%;
+    left: 1%;
+
+    display: flex;
+    flex-direction: column;
+    /* outline: 2px solid rgb(255, 255, 255); */
+    width: 260px;
+}
+
+.singleBut {
+    background-color: transparent;
+    /* outline: 2px solid rgb(255, 255, 255);
+    border-color: mistyrose; */
+    box-shadow: inset 4px 1px 9px 1px;
+    border-radius: 14px;
+    color: mistyrose;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    
+    margin-block-start: 12px;
+    margin-block-end: 12px;
+    padding: 8px 0px;
 }
 
 /*----------- 1. Typing Animation ----------*/
@@ -138,6 +164,10 @@ body {
 }
 
 /*----------- 2. fade in animation ----------*/
+.largeP {
+    font-size: 45px;
+}
+
 .mediumP {
     font-size: 22px;
 }
@@ -152,24 +182,33 @@ body {
     transform: translateY(1rem);
     animation: fadeIn 0.8s ease forwards;
 }
+
 .AnimaPara2 {
     /* color:blueviolet; */
     opacity: 0;
     transform: translateY(1rem);
     animation: fadeIn 0.8s ease 0.3s forwards;
 }
+
 .AnimaPara3 {
     /* color:blueviolet; */
     opacity: 0;
     transform: translateY(1rem);
-    animation: fadeIn 0.8s ease 0.6s forwards;
+    animation: fadeIn 0.8s ease 0.8s forwards;
 }
 
 .AnimaPara4 {
     /* color:blueviolet; */
     opacity: 0;
     transform: translateY(1rem);
-    animation: fadeIn 0.8s ease 0.8s forwards;
+    animation: fadeIn 0.8s ease 1.3s forwards;
+}
+
+.AnimaPara5 {
+    /* color:blueviolet; */
+    opacity: 0;
+    transform: translateY(1rem);
+    animation: fadeIn 1.5s ease 2.3s forwards;
 }
 
 @keyframes fadeIn {

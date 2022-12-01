@@ -16,10 +16,13 @@ Public-main-page
 2/ float msg notification -26
 
 # 11/26
-- sync glitch & github code - 
+- sync glitch & github code - 27
 * touch event *
-1/mouse animated
-2/scroll screen to next msg
+1/mouse animated - 28
+2/scroll screen to next msg - 28
+
+# 11/29
+- onclick button to trigger function in javascript
 - 3D space and event
 - screen controls
 - model and light baking 

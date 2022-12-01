@@ -50,6 +50,9 @@ window.addEventListener('load', function () {
    let para11 = document.getElementById("para11");
    let para12 = document.getElementById("para12");
    let para13 = document.getElementById("para13");
+   let buttonT = document.getElementById("buttonT")
+   let buttonL = document.getElementById("buttonL")
+   let buttonN = document.getElementById("buttonN")
 
    document.addEventListener("touchstart", (tS) => {
       // tS.preventDefault();
@@ -93,6 +96,7 @@ window.addEventListener('load', function () {
             para12.style.display = "none";
             para13.style.display = "none";
 
+
             swipes = 0;
          }
 
@@ -104,11 +108,16 @@ window.addEventListener('load', function () {
             para7.style.display = "none";
             para8.style.display = "none";
             para9.style.display = "none";
+            notifier.style.display = "none";
+
 
             para10.style.display = "block";
             para11.style.display = "block";
             para12.style.display = "block";
             para13.style.display = "block";
+            buttonT.style.display = "inline-block";
+            buttonL.style.display = "inline-block";
+            buttonN.style.display = "inline-block";
          }
 
          if (swipes == 1) {

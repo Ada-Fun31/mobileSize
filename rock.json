@@ -1,0 +1,51 @@
+{
+    "description" : "Artists who have been added to the Rock N' Roll Hall of Fame along with their anwser of induction",
+    "source" : "https://en.wikipedia.org/wiki/List_of_Rock_and_Roll_Hall_of_Fame_inductees",
+
+    "combo" : [
+        {
+        "question" : "What is the full form Covid?",
+        "anwser" : "COVID-19"
+        },
+        {
+        "question" : "The name of last national protest against the government in China?",
+        "anwser" : "June 4th"
+        },
+        {
+        "question" : "The name of recent zero-Covid strategy protest?",
+        "anwser" : "white paper revolution"
+        },
+        {
+        "question" : "How many provinces the recent protest spreaded across China?",
+        "anwser" : "21 provinces"
+        },
+        {
+        "question" : "How many people were killed in 24 November 2022 Ürümqi accident?",
+        "anwser" : "10"
+        },
+        {
+        "question" : "Have you heard about Beijing Sitong Bridge protest?",
+        "anwser" : "yes no"
+        },
+        {
+        "question" : "Why do you think health code was implemented?",
+        "anwser" : "not sure disease control personal information government"
+        },
+        {
+        "question" : "Have you heard about real name registration system?",
+        "anwser" : "yes no"
+        },
+        {
+        "question" : "How common you think facial recognition system is used today?",
+        "anwser" : "very common rare often always everywhere never"
+        },
+        {
+        "question" : "Mask mandates?",
+        "anwser" : "no yes eww sure of course"
+        },
+        {
+        "question" : "Zoom meetings?",
+        "anwser" : "no yes eww sure of course"
+        }
+    ]
+}

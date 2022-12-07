@@ -1,0 +1,161 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.3.48",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Cubejeans000",
+            "scale" : [
+                1.8039342164993286,
+                1.8039342164993286,
+                1.0573678016662598
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "emissiveFactor" : [
+                0,
+                0,
+                0
+            ],
+            "name" : "Material",
+            "normalTexture" : {
+                "index" : 0,
+                "scale" : 4.799999713897705,
+                "texCoord" : 0
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 1,
+                    "texCoord" : 0
+                },
+                "metallicRoughnessTexture" : {
+                    "index" : 2,
+                    "texCoord" : 0
+                },
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Plane.009",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0
+        },
+        {
+            "source" : 1
+        },
+        {
+            "source" : 2
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "1K-human_skin_2_normal",
+            "uri" : "1K-human_skin_2_normal.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "1K-human_skin_2_diffuseOriginal",
+            "uri" : "1K-human_skin_2_diffuseOriginal.jpg"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "1K-human_skin_2_metallic",
+            "uri" : "1K-human_skin_2_metallic.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 13254,
+            "max" : [
+                1.0696496963500977,
+                3.4193735122680664,
+                0.9995036721229553
+            ],
+            "min" : [
+                -1.0696496963500977,
+                -0.11507144570350647,
+                -1.0647263526916504
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 13254,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 13254,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 19968,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 159048,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 159048,
+            "byteOffset" : 159048
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 106032,
+            "byteOffset" : 318096
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 39936,
+            "byteOffset" : 424128
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 464064,
+            "uri" : "skin2.bin"
+        }
+    ]
+}

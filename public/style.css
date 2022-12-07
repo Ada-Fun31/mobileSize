@@ -1,6 +1,7 @@
 /*----------- Page Style ----------*/
 
 body {
+    /* overflow: hidden; */
     margin: 0;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.674);
@@ -30,8 +31,8 @@ body {
 }
 
 .bg-img {
-    width: 390px;
-    height: 844px;
+    width: 100vw;
+    height: 100vh;
 
     outline: 2px solid black;
     background-size: 100% 100%;
@@ -68,10 +69,50 @@ body {
     color: mistyrose;
     font-family: 'Source Code Pro', monospace;
     font-size: 14px;
-    
+
     margin-block-start: 12px;
     margin-block-end: 12px;
-    padding: 8px 0px;
+    padding: 8px 31px;
+}
+
+.singleInp {
+    background-color: #fde3df;
+    border-radius: 14px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    margin-block-start: 12px;
+    margin-block-end: 12px;
+    padding: 8px;
+}
+
+.swapbut {
+    position: fixed;
+    margin-block-start: -49px;
+    margin-inline-start: 281px;
+
+    background-color: transparent;
+    color: #daecff;
+    box-shadow: inset -2px -4px 9px 1px;
+    padding: 8px 10px;
+    border-radius: 14px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+
+}
+
+.swapbut2 {
+    position: fixed;
+    margin-block-start: -48px;
+    margin-inline-start: 281px;
+
+    background-color: transparent;
+    color: #daecff;
+    box-shadow: inset -2px -4px 9px 1px;
+    padding: 8px 10px;
+    border-radius: 14px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+
 }
 
 /*----------- 1. Typing Animation ----------*/
@@ -209,6 +250,13 @@ body {
     opacity: 0;
     transform: translateY(1rem);
     animation: fadeIn 1.5s ease 2.3s forwards;
+}
+
+.AnimaParainput {
+    /* color:blueviolet; */
+    opacity: 0;
+    transform: translateY(1rem);
+    animation: fadeIn 0.5s ease 0.2s forwards;
 }
 
 @keyframes fadeIn {

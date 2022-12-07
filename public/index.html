@@ -25,9 +25,9 @@
       <p class="paragraph" id="para2">Stranger <em id="userNumber"></em></p>
       <p class="paragraph" id="para3">My name is Ada.</p>
 
-      <p class="paragraph mediumP AnimaPara1" id="para4">By seeing this message,</p>
-      <p class="paragraph smallP AnimaPara2" id="para5">I believe you are devoured by my shirt</p>
-      <p class="paragraph smallP AnimaPara3" id="para6">bursting with curiosity.</p>
+      <p class="paragraph mediumP AnimaPara1" id="para4">Since you are <br>seeing this message,</p>
+      <p class="paragraph smallP AnimaPara2" id="para5">You must be consumed with curiosity</p>
+      <p class="paragraph smallP AnimaPara3" id="para6">about my shirt.</p>
       <script>
         document.getElementById("para4").style.display = "none";
         document.getElementById("para5").style.display = "none";
@@ -35,8 +35,8 @@
       </script>
       <!-- p2 -->
       <p class="paragraph largeP AnimaPara1" id="para7">Congrats!</p>
-      <p class="paragraph mediumP AnimaPara2" id="para8">You’ve find a way into</p>
-      <p class="paragraph mediumP AnimaPara3" id="para9">The regulation-free space</p>
+      <p class="paragraph mediumP AnimaPara2" id="para8">You’ve found <br>your way into a </p>
+      <p class="paragraph mediumP AnimaPara3" id="para9">regulation-free space.</p>
       <script>
         document.getElementById("para7").style.display = "none";
         document.getElementById("para8").style.display = "none";
@@ -44,10 +44,10 @@
       </script>
 
       <!-- p3 -->
-      <p class="paragraph largeP AnimaPara1" id="para10">By Swapping</p>
-      <p class="paragraph mediumP AnimaPara2" id="para11">any information</p>
-      <p class="paragraph smallP AnimaPara3" id="para12">you like with us,</p>
-      <p class="paragraph smallP AnimaPara4" id="para13"> I'll take you to places you’d rather be.</p>
+      <p class="paragraph largeP AnimaPara1" id="para10">If you swap</p>
+      <p class="paragraph mediumP AnimaPara2" id="para11">your information with us,</p>
+      <p class="paragraph smallP AnimaPara3" id="para12">I will take you to places</p>
+      <p class="paragraph smallP AnimaPara4" id="para13">you’d rather be.</p>
       <script>
         document.getElementById("para10").style.display = "none";
         document.getElementById("para11").style.display = "none";
@@ -56,19 +56,36 @@
       </script>
 
       <div class="infoButtons">
-        <button class="singleBut AnimaPara5" id="buttonT">YOUR VISITING TIMESTAMP</button>
-        <button class="singleBut AnimaPara5" id="buttonL">YOUR CURRENT LOCATION</button>
-        <button class="singleBut AnimaPara5" id="buttonN">YOUR NAME</button>
+        <form action="/threejs-page">
+          <button class="singleBut AnimaPara5" id="buttonT">Timestamp of your visit</button>
+        </form>
+
+        <button class="singleBut AnimaPara5" id="buttonL">Your current location</button>
+        <input class="singleInp AnimaParainput" id="location-input" placeholder="Location...">
+        <form action="/threejs-page">
+          <button class="swapbut AnimaParainput" id="pop1">swap</button>
+        </form>
+
+
+        <button class="singleBut AnimaPara5" id="buttonN">Your name</button>
+        <input class="singleInp AnimaParainput" id="name-input" placeholder="Name...">
+        <form action="/threejs-page">
+          <button class="swapbut2 AnimaParainput" id="pop2">swap</button>
+        </form>
       </div>
       <script>
         document.getElementById("buttonT").style.display = "none";
         document.getElementById("buttonL").style.display = "none";
         document.getElementById("buttonN").style.display = "none";
+
+        document.getElementById("location-input").style.display = "none";
+        document.getElementById("pop1").style.display = "none";
+
+        document.getElementById("name-input").style.display = "none";
+        document.getElementById("pop2").style.display = "none";
+
+
       </script>
-
-
-
-
 
       <p class="notification" id="notifier">「 swipe up 」</p>
       <p class="notification" id="notifier2">「 swipe up 」</p>
@@ -76,9 +93,7 @@
         document.getElementById("notifier2").style.display = "none";
       </script>
 
-
     </div>
-
 
   </div>
 

@@ -1,28 +1,24 @@
 window.addEventListener('load', function () {
 
-   /*----- user connection -----*/
+   /*----- 整个public的io -----*/
    let socket = io();
 
    //listen for confirmation of connection
    socket.on('connect', () => {
       console.log("connected")
 
-      socket.on('userArray', (userArray) => {
-         console.log(userArray);
-         let userNumber = userArray.length;
+      // socket.on('userArray', (userArray) => {
+      //    console.log(userArray);
+      //    let userNumber = userArray.length;
+      //    let user = document.getElementById("userNumber");
+      //    user.innerText = "#" + userNumber;
+      // });
+
+      socket.on('userNum', (num) => {
+         console.log(num);
          let user = document.getElementById("userNumber");
-         user.innerText = "#" + userNumber;
-      });
-
-      // setTimeout(() => {
-      //    textAnimation("I see,"
-      //       , "you find", "your way into", "a secret tunnel")
-      // }, 3000)
-
-      // setTimeout(() => {
-      //    textAnimation("At here,"
-      //       , "we sell privacy", "", "")
-      // }, 6000)
+         user.innerText = "#" + num;
+      })
 
    });
 
@@ -50,9 +46,13 @@ window.addEventListener('load', function () {
    let para11 = document.getElementById("para11");
    let para12 = document.getElementById("para12");
    let para13 = document.getElementById("para13");
-   let buttonT = document.getElementById("buttonT")
-   let buttonL = document.getElementById("buttonL")
-   let buttonN = document.getElementById("buttonN")
+   let buttonT = document.getElementById("buttonT");
+   let buttonL = document.getElementById("buttonL");
+   let buttonN = document.getElementById("buttonN");
+   let locInp = document.getElementById("location-input");
+   let NInp = document.getElementById("name-input");
+   let popbut1 = document.getElementById("pop1");
+   let popbut2 = document.getElementById("pop2");
 
    document.addEventListener("touchstart", (tS) => {
       // tS.preventDefault();
@@ -95,6 +95,10 @@ window.addEventListener('load', function () {
             para11.style.display = "none";
             para12.style.display = "none";
             para13.style.display = "none";
+
+            buttonT.style.display = "none";
+            buttonL.style.display = "none";
+            buttonN.style.display = "none";
 
 
             swipes = 0;
@@ -151,20 +155,73 @@ window.addEventListener('load', function () {
       })
    })
 
+   /*---------- buttons click event ----------*/
+   buttonT.addEventListener('click', function () {
+      console.log("time stamp");
+      socket.emit('timeStamp', { status: "success" });
+
+   });
+
+   buttonL.addEventListener('click', function () {
+      console.log("user location");
+      // change button to input
+      locInp.style.display = "inline-block";
+      buttonL.style.display = "none";
+      // add button to upload
+      popbut1.style.display = "inline-block";
+      // save location input to db
+      popbut1.addEventListener('click', function () {
+         console.log("location but clicked");
+         let locationInp = {
+            location: locInp.value
+         }
+         socket.emit('location', locationInp);
+         // Enter gallery -done in html
+
+
+      })
+   });
+
+   buttonN.addEventListener('click', function () {
+      console.log("user name");
+      // change button to input
+      NInp.style.display = "inline-block";
+      buttonN.style.display = "none";
+      // add button to upload
+      popbut2.style.display = "inline-block";
+      // save name input to db, and go gallery
+      popbut2.addEventListener('click', function () {
+         console.log("name but clicked");
+         let NameInp = {
+            Name: NInp.value
+         }
+         socket.emit('Name', NameInp);
+         // Enter gallery -done in html
+
+      })
+   });
+
+   /*---------- gallery event ----------*/
+   // after button clicked, send them to threejs-page
+
+
 })
 
 
-// let text1 = document.getElementById("para1");
-// let text2 = document.getElementById("para2");
-// let text3 = document.getElementById("para3");
-// let text4 = document.getElementById("para4");
 
-// function textAnimation(txt1, txt2, txt3, txt4) {
-//    text1.innerHTML = txt1;
-//    text2.innerHTML = txt2;
-//    text3.innerHTML = txt3;
-//    text4.innerHTML = txt4;
-// }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function countDown(sec) {
    let counter = sec
